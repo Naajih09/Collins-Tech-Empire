@@ -15,7 +15,7 @@
     <div class="container header-inner">
       <div class="logo">Collins Tech Empire</div>
       <nav>
-        <a href="index.html#home">Home</a>
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="projects.html">Projects</a>
@@ -28,35 +28,43 @@
   <section class="contact-hero">
     <div class="container center">
       <h1>Get in Touch</h1>
-      <p>We’d love to hear from you. Fill out the form below.</p>
+      <p>We’d love to hear from you. Fill out the form below and we’ll get back shortly.</p>
     </div>
   </section>
 
   <!-- CONTACT FORM -->
   <section class="contact-form-section">
     <div class="container">
-      <form id="contactForm" class="contact-form">
+      <form id="contactForm" class="contact-form"
+        action="https://formsubmit.co/Naajihibnsiraj@gmail.com" method="POST">
+
+        <!-- Disable Captcha -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <!-- Redirect directly to thankyou.html after submission -->
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html">
+
         <div class="form-group">
           <label for="name">Full Name *</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required />
           <small class="error-message"></small>
         </div>
 
         <div class="form-group">
           <label for="email">Email *</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required />
           <small class="error-message"></small>
         </div>
 
         <div class="form-group">
           <label for="phone">Phone *</label>
-          <input type="tel" id="phone" name="phone" required pattern="^[0-9]{10,15}$" />
+          <input type="tel" id="phone" name="phone" placeholder="e.g. 08012345678" required pattern="^[0-9]{10,15}$" />
           <small class="error-message"></small>
         </div>
 
         <div class="form-group">
           <label for="message">Message *</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
           <small class="error-message"></small>
         </div>
 
