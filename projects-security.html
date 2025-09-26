@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solar Projects - Collins Tech Empire</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .gallery-item {
+      text-align: center;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .gallery-item p {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+ <header>
+    <div class="container header-inner">
+      <div class="logo">Collins Tech Empire</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+<!-- GALLERY PAGE -->
+<section>
+  <div class="container">
+    <h1>Security Projects</h1>
+    <p>Here are some of our security installations and surveillance works.</p>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/security1.jpg" alt="Security 1" loading="lazy">
+        <p>Solar Installation at ABC Company</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/solar2.jpg" alt="Solar 2" loading="lazy">
+        <p>50kW Hybrid Solar Panels Setup</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/solar3.jpg" alt="Solar 3" loading="lazy">
+        <p>Inverter & Battery Housing</p>
+      </div>
+    </div>
+
+    <a href="projects.html" class="btn btn-primary">⬅ Back to Projects</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container center">
+    <p>© 2025 Collins Tech Empire | All Rights Reserved</p>
+  </div>
+</footer>
+
+</body>
+</html>
