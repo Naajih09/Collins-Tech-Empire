@@ -13,17 +13,20 @@
 
   <!-- HEADER -->
   <header>
-    <div class="container header-inner">
-      <div class="logo">Collins Tech Empire</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <div class="logo">
+        <a href="index.html" class="logo">Collins Tech Empire</a>
     </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="hamburger">☰</div>
   </header>
+
+
 
   <!-- HERO -->
   <main id="home">
@@ -41,7 +44,7 @@ From solar installations and house wiring to AI-driven automation, predictive ma
           </div>
         </div>
         <div class="hero-image">
-        <img src="images/hero-image.jpg" style="border-radius: 8px;" alt="Solar panel, wind turbines, security camera, and AI technology icons set against a futuristic city skyline at night, conveying innovation and sustainability in a modern urban environment" />
+        <img src="images/hhh.png" style="border-radius: 8px;" alt="Solar panel, wind turbines, security camera, and AI technology icons set against a futuristic city skyline at night, conveying innovation and sustainability in a modern urban environment" />
       </div>
     </section>
 
@@ -87,16 +90,7 @@ From solar installations and house wiring to AI-driven automation, predictive ma
 
     <!-- CONTACT -->
     <section id="contact" class="contact">
-      <div class="container">
-        <h2 class="center">Get in Touch</h2>
-        <form id="contactForm" class="card">
-          <input class="input" id="name" type="text" placeholder="Your Name" required>
-          <input class="input" id="email" type="email" placeholder="Email Address" required>
-          <input class="input" id="phone" type="tel" placeholder="Phone Number" required>
-          <textarea class="textarea" id="message" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
-      </div>
+     
     </section>
   </main>
 
@@ -109,5 +103,20 @@ From solar installations and house wiring to AI-driven automation, predictive ma
 
   <!-- JS link -->
   <script src="script.js"></script>
+    <script>
+    // Toggle hamburger menu on mobile
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    // Shrink header on scroll
+    window.addEventListener("scroll", () => {
+      document.querySelector("header").classList.toggle("scrolled", window.scrollY > 50);
+    });
+  </script>
+
 </body>
 </html>
