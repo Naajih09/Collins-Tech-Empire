@@ -12,19 +12,24 @@
 
   <!-- HEADER -->
    <header>
-    <div class="logo">
-        <a href="index.html" class="logo">Collins Tech Empire</a>
-    </div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="hamburger">☰</div>
-  </header>
+  <div class="logo">Collins Tech Empire</div>
 
+  <!-- NAV LINKS -->
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <!-- HAMBURGER -->
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
   <!-- SERVICE HERO -->
   <section class="service-hero">
     <div class="container center">
@@ -84,5 +89,25 @@
     </div>
   </footer>
 
+  <script>
+  const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const header = document.querySelector('header');
+
+// Toggle mobile menu + hamburger animation
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  hamburger.classList.toggle('open');
+});
+
+// Scroll shrink effect
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+</script>
 </body>
 </html>
